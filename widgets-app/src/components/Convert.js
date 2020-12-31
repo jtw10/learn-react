@@ -17,6 +17,7 @@ const Convert = ({ language, text }) => {
 
   useEffect(() => {
     const doTranslation = async () => {
+      // api key limited to only work on localhost:3000
       const { data } = await axios.post(
         "https://translation.googleapis.com/language/translate/v2",
         {},
